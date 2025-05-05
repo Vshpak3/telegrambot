@@ -6,6 +6,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 
 function sendText() {
+    //// bid channel id = -4784307508
     bot.sendMessage('5026099608','Send daily bid report and update race Website!')
     // Replace with your text-sending logic (e.g., SMS API call)
     console.log("Text sent at", new Date().toUTCString());
@@ -16,8 +17,8 @@ function sendText() {
     const target = new Date();
   
     // Set target to 01:00 UTC
-    target.setUTCHours(1, 0, 0, 0);
-  
+    target.setUTCHours(12, 45, 0, 0);
+   
     // If target time already passed today, schedule for tomorrow
     if (now > target) {
       target.setUTCDate(target.getUTCDate() + 1);
@@ -31,16 +32,13 @@ function sendText() {
     }, delay);
   }
 
-
+  
 bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     const messageText = msg.text;
     scheduleDaily()
     
         if (messageText === '/start') {    
-            // console.log(chatId)
-            // bot.sendMessage(chatId, 'asdfasdfasdf')
-
-    
-    }
+            console.log(chatId)
+       }
   });

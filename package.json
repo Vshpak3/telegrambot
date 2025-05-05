@@ -1,16 +1,26 @@
 {
-  "name": "telegram-alarm-bot",
+  "name": "bot_final",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "build": "babel src -d dist",
+    "dev": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "node-cron": "^3.0.3",
-    "node-schedule": "^2.1.1",
+    "express": "^4.9.8",
     "node-telegram-bot-api": "^0.66.0"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.1",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.1"
   }
 }
