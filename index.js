@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 const { createServer } = require('node:http');
-// const hostname = '127.0.0.1';
+const hostname = 'https://botfinal-901c3f6e3f3a.herokuapp.com/';
 const port = 3000;
 const server = createServer((req, res) => {
   res.statusCode = 200;
@@ -12,7 +12,7 @@ const server = createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, () => {
+server.listen(port, hostname, () => {
   console.log(`Server running `);
 
   function sendText() {
