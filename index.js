@@ -17,7 +17,7 @@ function sendText() {
     const target = new Date();
   
     // Set target to 01:00 UTC
-    target.setUTCHours(12, 45, 0, 0);
+    target.setUTCHours(16, 21, 0, 0);
    
     // If target time already passed today, schedule for tomorrow
     if (now > target) {
@@ -37,8 +37,9 @@ bot.on('message', (msg) => {
     const chatId = msg.chat.id;
     const messageText = msg.text;
     scheduleDaily()
+    console.log("222")
     
         if (messageText === '/start') {    
-            console.log(chatId)
+            console.log("111")
        }
   });
